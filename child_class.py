@@ -1,8 +1,8 @@
 class Person:
 
     def __init__(self, fname, lname):
-        self.fir = fname
-        self.lname = lname
+        self.firstname = fname
+        self.lastname = lname
     
     def printname(self):
 
