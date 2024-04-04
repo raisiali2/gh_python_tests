@@ -35,3 +35,32 @@ print(car2.drive())        # Calls the drive method on the car2 instance
 ## Instance Methods (description, drive): These methods are defined within the class and can be called on instances. They can access and modify the instance variables and perform operations using them. description returns a string that describes the car, while drive simulates the action of driving the car.
 ## Objects/Instances (car1, car2): car1 and car2 are objects created from the Car class and are instances of the Car class. They have their unique state (as defined by their instance variables) and behavior (as defined by their methods).
 ## This example encapsulates the concepts of classes, instances (objects), instance variables, and methods within a simple Python program, demonstrating how they work together in object-oriented programming.
+
+## class
+in python class bundle data and functionality together. creating a class involves defining a set of attributes (variables that belong to a class) and methods (functions that belong to a class) that operate on the attributes.
+`example of defining class:`
+
+```python
+class Person:
+    # class attribute
+    species = "canis familiaris"
+
+    # initializer / instance attribute
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    # method
+    def description(self):
+        return f"{self.firstname} and {self.lastname}"
+
+    def speak(self, language):
+        return f"his firstname is {self.firstname} and his lastname is {self.lastname} and he speaks {self.language}"
+
+```
+## built-in  __init__():
+- all the class have it
+- always executed when the class is being initiated
+- we use it to assign values to object properties, or other operations that are necessary to do when the object is being created
+
+it is constructor for super class that allows to assign
