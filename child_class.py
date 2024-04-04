@@ -15,7 +15,7 @@ class Student(Person):
         self.graduation_year = year
 
     def Welcome(self):
-        print("welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+        print("welcome", self.firstname, self.lastname, "to the class of", self.graduation_year)
 
 
 class Employee(Person):
