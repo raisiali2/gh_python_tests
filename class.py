@@ -26,29 +26,58 @@
 # print(car2.drive()) # calss the drive method on the car2 instance
 
 
-class Person:
-    # class attribute
-    species = "canis familiaris"
+# class Person:
+#     # class attribute
+#     species = "canis familiaris"
 
-    # initializer / instance attribute
-    def __init__(self, fname, lname):
-    # assign values to object properties
-    # __init__() is called automatically every time the class is being used to create a new object
-    # self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class
-        self.firstname = fname
-        self.lastname = lname
+#     # initializer / instance attribute
+#     def __init__(self, fname, lname):
+#     # assign values to object properties
+#     # __init__() is called automatically every time the class is being used to create a new object
+#     # self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class
+#         self.firstname = fname
+#         self.lastname = lname
 
-    # method
-    def description(self):
-        return f"{self.firstname} and {self.lastname}"
+#     # method
+#     def description(self):
+#         return f"{self.firstname} and {self.lastname}"
 
-    def speak(self, language):
-        self.language = language
-        return f"his firstname is {self.firstname} and his lastname is {self.lastname} and he speaks {self.language}"
+#     def speak(self, language):
+#         self.language = language
+#         return f"his firstname is {self.firstname} and his lastname is {self.lastname} and he speaks {self.language}"
     
-person1 = Person("ali", "raisi")
-# print(person1.description())
-print(person1.speak("french")) 
-# print(person1.firstname)
-# print(person1.lastname)
-# print(person1.language)     
+# person1 = Person("ali", "raisi")
+# # print(person1.description())
+# print(person1.speak("french")) 
+# # print(person1.firstname)
+# # print(person1.lastname)
+# # print(person1.language)     
+
+#===================================================
+# change self parameter to another name
+# class Person:
+#     def __init__(mysillyobject, name, age):
+#         mysillyobject.name = name
+#         mysillyobject.age = age
+    
+#     def myfunc(abc):
+#         print("hello my name is "+ abc.name)
+
+# p1 = Person("ali", 21)
+# p1.myfunc()
+
+# modify object property===========================
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def myfunc(self):
+        print("hello my name is " + self.name)
+
+p1 = Person("ali", 21)
+# p1.age = 20
+# delete object
+del p1.age
+
+print(p1.age)
